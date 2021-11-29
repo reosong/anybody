@@ -10,7 +10,7 @@
     <p id="msg1"></p>
     <p id="msg2"></p>
     <p id="msg3"></p>
-
+    <p class="m123"></p>
 
 
     <script>
@@ -25,12 +25,18 @@
             m3: function(a,b){
                 var result = a+b;
                 return result;
+            },
+            m4: function(a,b,c){
+                var result = a+b+c;
+                return result;
             }
         };
 
         document.getElementById("msg1").innerHTML = obj.m1();
         document.getElementById("msg2").innerHTML = obj.m2(100);
         document.getElementById("msg3").innerHTML = obj.m3(100,200);
+        document.getElementsByClassName("m123").innerHTML =obj.m4(50,30,20);
+
     </script>
     
 </body>
