@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<p>hong car</p>
+<p id="carname"></p>
+<p id="carcolor"></p>
+<p id="carspeed"></p>
+
+<p>kim car</p>
+<p id="carname2"></p>
+<p id="carcolor2"></p>
+<p id="carspeed2"></p>
+
+
+<script>
+    function Car(name, color, speed){
+        this.name = name;
+        this.color = color;
+        this.speed = speed;
+        this.speedup = function(){
+            return this.speed +10;
+        };
+        this.speeddown = function(){
+            var low = this.speed -10;
+            return low ;
+        };
+
+    }
+
+    var hongcar = new Car('sonats','blue',100);
+    var kimcar = new Car('jeep','red', 80);
+
+    var cname = document.getElementById("carname");
+    cname.textContent = hongcar.name;
+    var ccolor = document.getElementById("carcolor");
+    ccolor.textContent = hongcar.color;
+    var cspeedup = document.getElementById("carspeed");
+    cspeedup.textContent = hongcar.speedup();
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+    
+</body>
+</html>

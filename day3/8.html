@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>hong car</p>
+    <p id="hong1"></p>
+    <p id="hong2"></p>
+    <p id="hong3"></p>
+    <p> kim car</p>
+    <p id="kim1"></p>
+    <p id="kim2"></p>
+    <p id="kim3"></p>
+    <p id="kim4"></p>
+
+    <script>
+        function Car(name,color,speed){
+            this.name = name;
+            this.color = color;
+            this.speed = speed;
+
+            this.upspeed = function(){
+                return this.speed+10;
+            };
+            this.downspeed = function(){
+                var low = this.speed -10;
+                return low;
+            };
+    
+        }
+
+        var hongcar = new Car('mini','gray',200);
+        var kimcar = new Car('jeep','red',100);
+
+        kimcar.price = 3000;
+        delete kimcar.color;
+
+        var cname = document.getElementById("hong1");
+        cname.textContent = hongcar.name;
+        var ccolor = document.getElementById("hong2");
+        ccolor.textContent = hongcar.color;
+        var cspeed =document.getElementById("hong3");
+        cspeed.textContent = hongcar.upspeed();
+
+        var cname = document.getElementById("kim1");
+        cname.textContent = kimcar.name;
+        var ccolor = document.getElementById("kim2");
+        ccolor.textContent ="색상" +kimcar.color;
+        var cspeed =document.getElementById("kim3");
+        cspeed.textContent = kimcar.upspeed();
+        var cspeed =document.getElementById("kim4");
+        cspeed.textContent = kimcar.price;
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
